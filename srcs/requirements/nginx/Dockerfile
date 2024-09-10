@@ -14,5 +14,6 @@ COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 443
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
+CMD ["sh"]
 
