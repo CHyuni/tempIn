@@ -1,7 +1,5 @@
 #!/bin/sh
 
-rm -rf /var/lib/mysql/*
-
 mariadb-install-db --user=mysql --datadir=/var/lib/mysql --skip-test-db
 mkdir -p /run/mysqld
 mysqld &

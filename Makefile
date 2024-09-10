@@ -20,6 +20,7 @@ fclean:
 	docker-compose -f ./srcs/docker-compose.yml down
 	docker volume rm $$(docker volume ls -q) || true
 	docker image rm $$(docker images -aq) || true
+	rm -rf /home/changhyu/data
 
 re:
 	make fclean
