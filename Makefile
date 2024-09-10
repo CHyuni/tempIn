@@ -5,14 +5,8 @@ build:
 	docker-compose -f ./srcs/docker-compose.yml build
 
 up:
-	sudo groupadd nginx
-	sudo useradd -r -g nginx -s /sbin/nologin nginx
 	mkdir -p /home/changhyu/data/wordpress
 	mkdir -p /home/changhyu/data/mariadb
-	mv ./index.html /home/changhyu/data/wordpress
-	sudo chown -R nginx:nginx /home/changhyu/data/wordpress
-	sudo chmod -R 755 /home/changhyu/data/wordpress
-	sudo chmod -R 755 /home/changhyu/data/wordpress/index.html
 	docker-compose -f ./srcs/docker-compose.yml up -d
 
 down:
