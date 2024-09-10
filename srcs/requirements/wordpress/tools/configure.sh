@@ -10,4 +10,6 @@ wp core install --url=$DOMAIN_NAME --title=$WP_NAME --admin_user=$ADMIN_NAME --a
 
 wp user create $USER_NAME $USER_EMAIL --user_pass=$USER_PASS
 
+chown -R www-data:www-data /var/www/html
+
 /usr/sbin/php-fpm81 -F
