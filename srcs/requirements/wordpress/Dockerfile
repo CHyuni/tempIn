@@ -1,10 +1,8 @@
 FROM alpine:3.18
 
 RUN apk update && apk add --no-cache php81 php81-json \
-    php81-mysqli php81-curl php81-dom php81-exif php81-pecl-imagick \
-    php81-pecl-igbinary php81-intl php81-mbstring php81-openssl \
-    php81-xml php81-fpm php81-zip php81-phar curl dumb-init
-    
+    php81-mysqli php81-curl php81-fpm curl dumb-init php81-phar
+
 COPY ./tools/configure.sh .
 RUN chmod +x ./configure.sh
 
