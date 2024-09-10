@@ -1,5 +1,5 @@
 
-USER := taejikim
+USER := changhyu
 DATA_DIR := /home/$(USER)/data
 DOCKER_COMPOSE_FILE := ./srcs/docker-compose.yml
 DOCKER_COMPOSE := docker compose -f $(DOCKER_COMPOSE_FILE)
