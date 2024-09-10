@@ -60,3 +60,9 @@ volumes:
       type: none
       o: bind
       device: /home/changhyu/data/wordpress
+  nginxssl_vol:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/changhyu/ssl
