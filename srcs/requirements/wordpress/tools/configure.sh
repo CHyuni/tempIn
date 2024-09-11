@@ -2,7 +2,7 @@
 
 cd /var/www/html
 
-wp core download --allow-root
+wp core download --allow-root --version=6.6.1
 
 wp config create --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_HOST --skip-check
 
