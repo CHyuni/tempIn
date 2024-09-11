@@ -8,7 +8,7 @@ mysqld &
         sleep 1
     done
 
-mysql -uroot --skip-password <<EOF
+mysql -uroot <<EOF
 ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS';
 CREATE DATABASE IF NOT EXISTS $DB_NAME;
 GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'%' IDENTIFIED BY '$DB_PASS';
