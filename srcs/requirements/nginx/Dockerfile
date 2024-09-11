@@ -1,9 +1,8 @@
 FROM alpine:3.18
 
-RUN apk update && apk add --no-cache nginx=1.24.0-r0 openssl dumb-init
+RUN apk update && apk add --no-cache nginx openssl dumb-init
 
 RUN mkdir -p /etc/nginx/ssl
-RUN mkdir -p /etc/nginx/http.d
 
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout /etc/nginx/ssl/selfsigned.key \
