@@ -7,7 +7,7 @@ build:
 up:
 	mkdir -p /home/changhyu/data/wordpress
 	mkdir -p /home/changhyu/data/mariadb
-	docker-compose -f ./srcs/docker-compose.yml up -d
+	docker-compose -f ./srcs/docker-compose.yml up --build -d
 
 down:
 	docker-compose -f ./srcs/docker-compose.yml down
